@@ -18,7 +18,7 @@ class CircleDrawer(QMainWindow):
     def __init__(self):
         super().__init__()
         self.circles = []
-        loadUi('design.ui', self)
+        loadUi('untitled.ui', self)
         self.init_ui()
 
     def init_ui(self):
