@@ -1,5 +1,5 @@
 import sys
-from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout, QPushButton, QGraphicsScene, QGraphicsView, QWidget
+from PyQt5.QtWidgets import QApplication, QMainWindow, QVBoxLayout
 from PyQt5.QtGui import QPainter, QColor
 from PyQt5.QtCore import Qt
 from PyQt5.uic import loadUi
@@ -34,7 +34,6 @@ class CircleDrawer(QMainWindow):
         y = random.randint(50, 550)
         radius = random.randint(10, 50)
         color = QColor(Qt.yellow)
-
         self.circles.append(Circle(x, y, radius, color))
         self.repaint()
 
