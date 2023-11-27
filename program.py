@@ -18,7 +18,7 @@ class CircleDrawer(QMainWindow):
     def __init__(self):
         super().__init__()
         self.circles = []
-        loadUi('untilted.ui', self)
+        loadUi('design.ui', self)
         self.init_ui()
 
     def init_ui(self):
@@ -34,13 +34,14 @@ class CircleDrawer(QMainWindow):
         y = random.randint(50, 550)
         radius = random.randint(10, 50)
         color = QColor(Qt.yellow)
+
         self.circles.append(Circle(x, y, radius, color))
         self.repaint()
 
     def paintEvent(self, event):
         painter = QPainter(self)
         for circle in self.circles:
-            painter.setBrush(circle.color)
+            painter.setPen(circle.color)
             painter.drawEllipse(circle.x - circle.radius, circle.y - circle.radius,
                                 2 * circle.radius, 2 * circle.radius)
 
